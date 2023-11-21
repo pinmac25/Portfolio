@@ -1,0 +1,197 @@
+<!--File by Marina Pineda
+Student number 040761040
+Web Programming 312: Lab Assignment 1
+Due date: Sunday, July 16, 2023
+Description: This is the courses page for my professional portfolio-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marina Pineda">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+</head>
+<body class="courses">
+    <div class="grid-container">
+        <header id="section1" class="grid-item header">
+                <a href="index.html" class="button">Home</a>
+                <a href="Resume.html#main" class="button">Resume</a>
+                <a href="Courses.html#main" class="button">Courses</a>
+            <h1 class="animate__animated animate__bounceInDown"> <span class="wave">👋</span> Hi! I'm Marina.</h1>
+                <img src="Images/profilepicture1.jpg" alt="Image of me standing infront of Morraine Lake in Alberta.">
+                    <h2>Computer Programming Student</h2>
+                        <p>I am an experienced healthcare professional currently transitioning into a computer programming career. My background in utilizing technology to improve patient care has inspired me
+                            to further develop my technical skills into an IT role.</p>
+        </header>
+            <div class="grid-item main" id="main">
+                <h3 id="course-index">My Program Courses</h3>
+                    <div class="search-container">
+                        <input type="text" id="myInput" onkeyup="searchCourses()" placeholder="  Search for courses..." title="Type in a course">
+                    </div>
+                <div class="filterContainer">
+                    <br><br><label for="semesterFilter">Filter by Semester:</label>
+                    <select id="semesterFilter" onchange="filterCourses()">
+                        <option value="all">All</option>
+                        <option value="level1">Level 1</option>
+                        <option value="level2">Level 2</option>
+                        <option value="level3">Level 3</option>
+                    </select>
+                </div><br>
+                <div class="button-container">
+                    <button onclick="sortAlphabetically()">Sort Alphabetically A-Z</button>&nbsp;&nbsp;
+                    <button onclick="sortReverseAlphabetically()">Sort Reverse Alphabetically Z-A</button>
+                </div>
+                    <p> Click on a course name below for its description or click <a href="courseDetails.html#course-details">here</a> to see all.</p>
+                <div id="coursesContainer">
+                    <ul id="allCourses" class="course-list">
+                        <li class="level1"><a href="courseDetails.html#achieving-success">Achieving Success in Changing Environments</a></li>
+                        <li class="level1"><a href="courseDetails.html#communications">Communications I</a></li>
+                        <li class="level1"><a href="courseDetails.html#computer-essentials">Computer Essentials</a></li>
+                        <li class="level1"><a href="courseDetails.html#intro-to-cp">Introduction to Computer Programming</a></li>
+                        <li class="level1"><a href="courseDetails.html#intro-to-db">Introduction to Database</a></li>
+                        <li class="level1"><a href="courseDetails.html#math">Technical Math for Computer Science</a></li>
+                        <li class="level2"><a href="courseDetails.html#co-op">Cooperative Education Readiness</a></li>
+                        <li class="level2"><a href="courseDetails.html#db-systems">Database Systems</a></li>
+                        <li class="level2"><a href="courseDetails.html#oop-java">Object Oriented Programming (Java)</a></li>
+                        <li class="level2"><a href="courseDetails.html#linux">Operating System Fundamentals (GNU/Linux)</a></li>
+                        <li class="level2"><a href="courseDetails.html#gen-ed">Personal Understanding</a></li>
+                        <li class="level2"><a href="courseDetails.html#comms-2">Technical Communications for Engineering Technology</a></li>
+                        <li class="level2"><a href="courseDetails.html#web-programming">Web Programming</a></li>
+                        <li class="level3"><a href="courseDetails.html#business-programming">Business Programming (COBOL)</a></li>
+                        <li class="level3"><a href="courseDetails.html#mobile">Mobile Graphical Interface Programming</a></li>
+                        <li class="level3"><a href="courseDetails.html#network">Network Programming</a></li>
+                        <li class="level3"><a href="courseDetails.html#oopdesign">Object Oriented Programming with Design Patterns</a></li>
+                        <li class="level3"><a href="courseDetails.html#systems">Systems Analysis and Design</a></li>
+                    </ul>
+                </div>
+            <script>
+                function searchCourses() {
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("allCourses");
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+                function filterCourses() {
+                    var filterValue, ul, li, i;
+                    filterValue = document.getElementById("semesterFilter").value;
+                    ul = document.getElementById("allCourses");
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++) {
+                        li[i].style.display = "";
+                    }
+                    if (filterValue === "level1") {
+                        for (i = 0; i < li.length; i++) {
+                            if (!li[i].classList.contains("level1")) {
+                                li[i].style.display = "none";
+                            }
+                        }
+                    } else if (filterValue === "level2") {
+                        for (i = 0; i < li.length; i++) {
+                            if (!li[i].classList.contains("level2")) {
+                                li[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+                function sortAlphabetically() {
+                    var ul, li, i, switching, shouldSwitch;
+                    ul = document.getElementById("allCourses");
+                    switching = true;
+                    while (switching) {
+                        switching = false;
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length - 1; i++) {
+                            shouldSwitch = false;
+                            if (
+                                li[i].style.display !== "none" &&
+                                li[i + 1].style.display !== "none" &&
+                                li[i].innerText.toLowerCase() > li[i + 1].innerText.toLowerCase()
+                            ) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                        if (shouldSwitch) {
+                            li[i].parentNode.insertBefore(li[i + 1], li[i]);
+                            switching = true;
+                        }
+                    }
+                }
+                function sortReverseAlphabetically() {
+                    var ul, li, i, switching, shouldSwitch;
+                    ul = document.getElementById("allCourses");
+                    switching = true;
+                    while (switching) {
+                        switching = false;
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length - 1; i++) {
+                            shouldSwitch = false;
+                            if (
+                                li[i].style.display !== "none" &&
+                                li[i + 1].style.display !== "none" &&
+                                li[i].innerText.toLowerCase() < li[i + 1].innerText.toLowerCase()
+                            ) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                        if (shouldSwitch) {
+                            li[i].parentNode.insertBefore(li[i + 1], li[i]);
+                            switching = true;
+                        }
+                    }
+                }
+            </script>
+        </div>
+        <div class="grid-item sidebar">
+            <h4>My Medical Program Courses</h4>
+                <h5>Medical Radiation Technology</h5>
+                    <ul>
+                        <li>Clinical Practicum (1 year)</li>
+                        <li>Applied Anatomy and Physiology</li>
+                        <li>CT Applications</li>
+                        <li>Contrast Media Agents & IV Skills</li>
+                        <li>Imaging & Health Care Technologies</li>
+                        <li>Pathology</li>
+                        <li>Professional Practice & Legislation</li>
+                        <li>Radiological Protocols</li>
+                        <li>Advanced Medical Radiation Sciences</li>
+                        <li>Image Processing and Management</li>
+                        <li>Patient Management</li>
+                        <li>Quality Control for Radiography</li>
+                        <li>Radiation Biology and Protection</li>
+                        <li>Health Ethics</li>
+                    </ul>
+                <h5>Practical Nursing</h5>
+                    <ul>
+                        <li>Principles of Sociology</li>
+                        <li>Nursing Practicum (5 months)</li>
+                        <li>Nursing Theory</li>
+                        <li>Pathophysiology</li>
+                        <li>Pharmacology</li>
+                        <li>Nursing Research</li>
+                        <li>Healthcare Consumer</li>
+                        <li>Introduction to Psychology</li>
+                    </ul>
+        </div>
+    </div>
+    <footer class ="grid-item footer">
+        <nav>
+            <a href="#section1">Back to Top</a>
+        </nav> 
+            <p>© 2023 Personal Portfolio: Marina Pineda.</p> 
+    </footer>
+</body>
+</html>

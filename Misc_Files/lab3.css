@@ -1,0 +1,81 @@
+/*File by Marina Pineda
+Student number 040761040
+Web Programming 312: Lab exercise 3
+Created on Wednesday, June 14, 2023 
+This is an external CSS stylesheet*/ 
+
+body {
+    background-color: #DDD78D;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+}
+header, footer {
+    background-color: #60594D;
+    color: #93A29B;
+    border: 4px solid #333333;
+    padding: 10px;
+    
+}
+header h1 {
+    font-size: 42pt;
+    white-space: nowrap;
+    
+}
+nav {
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    font-size: 12pt;
+}
+nav a {
+    display: inline-block;
+    padding: 5px;
+    background-color: #d9e2de;
+    color: #0a0a0a;
+    border-radius: 10px;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #8B635C;
+}
+h2 {
+    font-size: 16pt;
+    font-weight: bold;
+}
+p {
+    font-size: 14pt;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+img {
+    float: right;
+    width: 25%;
+    margin: 10px;
+}
+blockquote {
+    background-color: #DCBF85;
+    text-align: center;
+    font-size: 14pt;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.originandimportance {
+    font-weight: bold;
+}
+.specificity {
+    font-weight: bold;
+}
+.orderofappearance {
+    font-weight: bold;
+}
+.inheritance {
+    font-weight: bold;
+}
+h3 {
+    text-align: right;
+    font-size: 10pt;
+    font-style: italic;
+}
