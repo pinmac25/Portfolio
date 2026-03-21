@@ -88,7 +88,7 @@ p {
 .grid-item {
     background-color: rgba(63, 65, 78, 0.8);
     font-family: 'Roboto', sans-serif;
-    font-size: 16pt;
+    font-size: 20pt;
     padding: 20px;
     color: rgb(199, 195, 195);
 }
@@ -150,6 +150,8 @@ a {
 
 .landingpage h3 {
     font-family: 'Roboto', sans-serif;
+    font-size: 24pt;
+    text-decoration: underline;
 }
 
 img[src="Images/me.jpg"] {
