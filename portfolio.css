@@ -87,7 +87,7 @@ p {
 
 .grid-item {
     background-color: rgba(63, 65, 78, 0.8);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16pt;
     padding: 20px;
     color: rgb(199, 195, 195);
