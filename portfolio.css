@@ -176,6 +176,8 @@ img[src="Images/algonquin-college-campus.jpg"] {
 
 /* the following section applies to the Resume.html page only*/
 
+
+
 .resume h3 {
     font-size: 24pt ;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -201,6 +203,7 @@ img[src="Images/algonquin-college-campus.jpg"] {
     font-size: 14pt;
     margin-top: 0.25em; 
     margin-bottom: 0.25em; 
+    margin-left: 10pt;
 }
 
 .resume li {
@@ -219,8 +222,7 @@ img[src="Images/resumePic1.jpg"] {
 }
 
 img[src="Images/chest-x-ray.jpg"] {
-    display: flex;
-    justify-content: center;
+    
     width:250px;
     height: 210px;
     /*align-content: center;*/
