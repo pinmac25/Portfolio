@@ -193,7 +193,7 @@ img[src="Images/algonquin-college-campus.jpg"] {
 .resume h5 {
     font-size: 14pt;
     margin: 0;
-    font-style: italic;
+   /* font-style: italic; */
 }
 
 .resume li {
