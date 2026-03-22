@@ -192,15 +192,15 @@ img[src="Images/algonquin-college-campus.jpg"] {
 }
 
 .resume h5 {
-    font-size: 14pt;
+    font-size: 16pt;
     margin: 10pt;
     
 }
 
 .resume h6 {
+    font-size: 14pt;
     margin-top: 0.25em; 
     margin-bottom: 0.25em; 
-    margin-left: 2em;
 }
 
 .resume li {
