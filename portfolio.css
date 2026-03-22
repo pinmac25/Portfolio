@@ -194,8 +194,6 @@ img[src="Images/algonquin-college-campus.jpg"] {
 .resume h5 {
     font-size: 14pt;
     margin: 10pt;
-    margin: 0;
-    font-weight: normal;
     
 }
 
@@ -218,10 +216,11 @@ img[src="Images/resumePic1.jpg"] {
     border-color: #2c3035;
     border-radius: 15px;
     border-width: 10px;
-    padding-top: 10px;
 }
 
 img[src="Images/chest-x-ray.jpg"] {
+    display: flex;
+    justify-content: center;
     width:250px;
     height: 210px;
     /*align-content: center;*/
@@ -229,8 +228,7 @@ img[src="Images/chest-x-ray.jpg"] {
     border-color: #2c3035;
     border-radius: 15px;
     border-width: 10px;
-   /* padding-top: 10px; */
-    display: flex; justify-content: center;
+    
 }
 
 img[src="Images/nursing.jpg"] {
@@ -241,7 +239,6 @@ img[src="Images/nursing.jpg"] {
     border-color: #2c3035;
     border-radius: 15px;
     border-width: 10px;
-    padding-top: 10px;
 }
 
 
