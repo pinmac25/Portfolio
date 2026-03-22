@@ -172,37 +172,7 @@ img[src="Images/algonquin-college-campus.jpg"] {
     margin-top: 5px;
 }
 
-#main h3,
-#main h4,
-#main h5,
-#main h6 {
-  margin-top: 0.25em;  /* smaller space above */
-  margin-bottom: 0.25em; /* smaller space below */
-}
 
-#main h3 {
-  margin-top: 0.5em; /* a little more space before section titles */
-}
-
-#main h4 {
-  margin-left: 1em;  /* indent for subheading */
-}
-
-#main h5 {
-  margin-left: 1.5em; /* further indent for more detail */
-  font-weight: normal; /* optional: makes it less heavy */
-}
-
-#main h6 {
-  margin-left: 2em; /* further indent for dates */
-  font-style: italic; /* optional: makes it look cleaner */
-}
-
-#main ul {
-  margin-left: 2.5em; /* aligns bullet points with the headings */
-  margin-top: 0.25em;
-  margin-bottom: 0.5em;
-} 
 
 /* the following section applies to the Resume.html page only*/
 
@@ -223,8 +193,16 @@ img[src="Images/algonquin-college-campus.jpg"] {
 
 .resume h5 {
     font-size: 14pt;
+    margin: 10pt;
     margin: 0;
-   /* font-style: italic; */
+    font-weight: normal;
+    
+}
+
+.resume h6 {
+    margin-top: 0.25em; 
+    margin-bottom: 0.25em; 
+    margin-left: 2em;
 }
 
 .resume li {
@@ -246,12 +224,13 @@ img[src="Images/resumePic1.jpg"] {
 img[src="Images/chest-x-ray.jpg"] {
     width:250px;
     height: 210px;
-    align-content: center;
+    /*align-content: center;*/
     border-style: outset;
     border-color: #2c3035;
     border-radius: 15px;
     border-width: 10px;
-    padding-top: 10px;
+   /* padding-top: 10px; */
+    display: flex; justify-content: center;
 }
 
 img[src="Images/nursing.jpg"] {
