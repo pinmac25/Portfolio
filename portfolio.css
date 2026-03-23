@@ -425,8 +425,9 @@ img[src="Images/nursing.jpg"] {
         "header"
         "main-content"
         "footer";
-    padding: 30px;
+
 }
+
 
 .projects h3 {
     font-size: 24pt ;
@@ -435,19 +436,20 @@ img[src="Images/nursing.jpg"] {
     border-style: inset;
     background-color: #4371973a;
     border-width: 5px;
-    
+    margin-left: 25px;
 }
 
 .projects h4 {
     font-size: 18pt;
-    margin: 10pt;
+    margin: 20pt;
     padding-top: 25px;
+
 }
 
 
 
 .projects h5 {
     font-size: 16pt;
-    margin: 10pt;
+    margin: 20pt;
     
 }
