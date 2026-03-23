@@ -154,6 +154,10 @@ a {
     text-decoration: underline;
 }
 
+.landingpage h4 {
+    margin-bottom: 0.25em; 
+}
+
 img[src="Images/me.jpg"] {
     border-style: outset;
     border-color: #2c3035;
