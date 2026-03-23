@@ -414,7 +414,7 @@ img[src="Images/nursing.jpg"] {
 
 /*This is for the projects page*/
 
-.projects .grid-item main{
+.projects .main-container{
     display: grid;
     margin: 30px;
     grid-template-columns: 1fr;
@@ -422,7 +422,7 @@ img[src="Images/nursing.jpg"] {
     gap: 50px;
     grid-template-areas: 
         "header"
-        "grid-item main"
+        "main-content"
         "footer";
 }
 
