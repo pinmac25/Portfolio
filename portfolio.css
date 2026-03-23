@@ -443,24 +443,24 @@ img[src="Images/nursing.jpg"] {
 }
 
 .projects h4 {
-    font-size: 18pt;
+    font-size: 24px;
     padding-top: 30px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
 
 }
 
 
 
 .projects h5 {
-    font-size: 16pt;
-    margin-left: 200px;
-    margin-right: 200px;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
     
 }
 
 .projects ul {
-    margin-left: 200px;
-    margin-right: 200px;
-    
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
 }
